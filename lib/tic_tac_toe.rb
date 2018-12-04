@@ -51,6 +51,7 @@ end
 def play(board)
  count = 0 
   while !over?(board)
+<<<<<<< HEAD
 #    puts "Count = " + count.to_s
     turn(board)
   count += 1
@@ -60,6 +61,12 @@ def play(board)
   else
     puts "Congratulations #{winner(board)}!"
   end
+=======
+    puts "Count = " + count.to_s
+    turn(board)
+  count += 1
+  end
+>>>>>>> 2d66ae7a99363a452c15177f46dd096dc8c4e9ba
 end
 
 
@@ -135,6 +142,7 @@ def full?(board)
 end
 
 def draw?(board)
+<<<<<<< HEAD
   fullflag=full?(board)
   
   if won?(board)
@@ -149,6 +157,15 @@ def draw?(board)
   #else
   #  return false
   #end
+=======
+  if full?(board)  && !won?(board)
+    return true 
+  elsif !full?(board) && !won?(board)
+    return false
+  else
+    return false
+  end
+>>>>>>> 2d66ae7a99363a452c15177f46dd096dc8c4e9ba
 end
 
 # over 
